@@ -14,13 +14,16 @@
        
         <div class="ci-demo-btn">
           <span>{{unDonelength}}条剩余</span>
-          <Button :type="viewKwy === 'all' ? 'primary' : 'default'" @click = "changeList('all')">全部</Button>
-          <Button :type="viewKwy === 'done' ? 'primary' : 'default'" @click = "changeList('done')">已完成</Button>
-          <Button :type="viewKwy === 'undone' ? 'primary' : 'default'" @click = "changeList('undone')">未完成</Button>
+          <ButtonGroup>
+            <Button :type="viewKwy === 'all' ? 'primary' : 'default'" @click = "changeList('all')">全部</Button>
+            <Button :type="viewKwy === 'done' ? 'primary' : 'default'" @click = "changeList('done')">已完成</Button>
+            <Button :type="viewKwy === 'undone' ? 'primary' : 'default'" @click = "changeList('undone')">未完成</Button>
+          </ButtonGroup>
           <a style="margin-left:20px" @click="removeDoneAll">清空已完成</a>
         </div>
       </div>
     </div>
+    <audio src=""></audio>
   </div>
 </template>
 
